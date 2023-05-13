@@ -1,0 +1,490 @@
+{% load static %}
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Entertainment News</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+
+        <style>
+         
+            @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100&family=Fjalla+One&family=Yatra+One&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500&display=swap');
+
+         *{
+            box-sizing: border-box;
+            padding:0;
+            margin:0;
+         }
+
+         body {
+            font-family: Arial, Helvetica, sans-serif;
+            overflow-x:hidden;
+         }
+
+         /* Float four columns side by side */
+         .column {
+         float: left;
+         width: 33%;
+         padding: 0 10px;
+         }
+
+         /* Remove extra left and right margins, due to padding */
+         .row {margin: 0 -5px;}
+
+         /* Clear floats after the columns */
+         .row:after {
+            content: "";
+            display: table;
+            clear: both;
+         }
+
+          /* Responsive columns */
+          @media screen and (max-width: 600px) {
+             .column {
+                 width: 100%;
+                 display: block;
+                 margin-bottom: 20px;
+                }
+            }
+
+            /* Style the counter cards */
+            .card {
+                margin:40px;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+                padding: 16px;
+                text-align: center;
+                background-color: #f1f1f1;
+                }
+
+
+
+
+                ul {
+  list-style: none;
+  padding-left: 0;
+}
+footer {
+  background-color: #555;
+  background-color:#710512;
+  color: #bbb;
+  line-height: 1.5;
+}
+footer a {
+  text-decoration: none;
+  color: #eee;
+}
+a:hover {
+  text-decoration: underline;
+}
+.ft-title {
+  color: #fff;
+  font-family: "Merriweather", serif;
+  font-size: 1.375rem;
+  padding-bottom: 0.625rem;
+}
+/* Sticks footer to bottom */
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+.container {
+  flex: 1;
+}
+/* Footer main */
+.ft-main {
+  padding: 1.25rem 1.875rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+@media only screen and (min-width: 29.8125rem /* 477px */) {
+  .ft-main {
+    justify-content: space-evenly;
+  }
+}
+@media only screen and (min-width: 77.5rem /* 1240px */) {
+  .ft-main {
+    justify-content: space-evenly;
+  }
+}
+.ft-main-item {
+  padding: 1.25rem;
+  min-width: 12.5rem;
+}
+
+/* Footer main | Newsletter form */
+form {
+  display: flex;
+  flex-wrap: wrap;
+}
+input[type="email"] {
+  width:500px;
+  border: 0;
+  padding: 0.625rem;
+  margin-top: 0.3125rem;
+}
+input[type="submit"] {
+  background-color: #00d188;
+  color: #fff;
+  cursor: pointer;
+  border: 0;
+  padding: 0.625rem 0.9375rem;
+  margin-top: 0.3125rem;
+}
+/* Footer social */
+.ft-social {
+  padding: 0 1.875rem 1.25rem;
+}
+.ft-social-list {
+  display: flex;
+  justify-content: center;
+  border-top: 1px #777 solid;
+  padding-top: 1.25rem;
+}
+.ft-social-list li {
+  margin: 0.5rem;
+  font-size: 1.25rem;
+}
+/* Footer legal */
+.ft-legal {
+  padding: 0.9375rem 1.875rem;
+  background-color: #000000;
+}
+.ft-legal-list {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.ft-legal-list li {
+  margin: 0.125rem 0.625rem;
+  white-space: nowrap;
+}
+/* one before the last child */
+.ft-legal-list li:nth-last-child(2) {
+    flex: 1;
+}
+
+header.navbar {
+    justify-content: space-between;
+    align-items: center;
+}
+div.header {
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 15% 70% 15%;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+
+
+
+nav {    
+    display: block;
+    text-align: center;
+    background-color:#19A7CE;
+    background-color:#8c0a19;
+    height:70px;
+  }
+  nav ul {
+    margin: -6px;
+    padding: 0px;
+    
+    list-style: none;
+  }
+  .nav a {
+    display:block; 
+    background : #19A7CE;
+    background:#8c0a19;
+    color:#F6F1F1; 
+    text-decoration: none;
+    padding:.8em 1.8em  ;
+    text-transform: uppercase;
+    font-size: 16px;
+    letter-spacing: 2px;
+    text-shadow: 0 -1px 0 #000;
+    position: relative;
+  }
+  .nav{  
+    vertical-align: top; 
+    display: inline-block;
+    /*box-shadow: 1px -1px -1px 1px #000, -1px 1px -1px 1px #fff, 0 0 6px 3px #fff;*/
+    border-radius:6px;
+  }
+  .nav li{position: relative;}
+  .nav > li { 
+    float:left; 
+    
+    margin-right: 1px; 
+  } 
+  .nav > li > a { 
+    margin-bottom:1px;
+  }
+  .nav > li:hover , .nav > li:hover >a{  }
+  .nav li:hover > a { color:#000; }
+  .nav > li:first-child  { border-radius: 4px 0 0 4px;} 
+  .nav > li:first-child>a{border-radius: 4px 0 0 0;}
+  .nav > li:last-child  { 
+    border-radius: 0 0 4px 0; 
+    margin-right: 0;
+  } 
+  .nav > li:last-child >a{border-radius: 0 4px 0 0; }
+  .nav li li a { margin-top:1px}
+  
+  
+  
+    .nav li a:first-child:nth-last-child(2):before { 
+     content:""; 
+     position: absolute; 
+     height:0; 
+     width: 0; 
+     border: 5px solid transparent; 
+     top: 50% ;
+     right:5px;  
+   }
+   
+   
+   /* submenu positioning*/
+.nav ul {
+  position: absolute;
+  white-space: nowrap;
+  border-bottom: 5px solid  #000;
+  z-index: 1;
+  left: -99999em;
+}
+.nav > li:hover > ul {
+  left: auto;
+  padding-top: 5px  ;
+  min-width: 100%;
+}
+.nav > li li ul {  border-left:1px solid #fff;}
+
+
+.nav > li li:hover > ul { 
+ /* margin-left: 1px */
+  left: 100%;
+  top: -1px;
+}
+/* arrow hover styling */
+.nav > li > a:first-child:nth-last-child(2):before { 
+  border-top-color: #aaa; 
+}
+.nav > li:hover > a:first-child:nth-last-child(2):before {
+  border: 5px solid transparent; 
+  border-bottom-color: #000; 
+  margin-top:-5px
+}
+.nav li li > a:first-child:nth-last-child(2):before {  
+  border-left-color: #aaa; 
+  margin-top: -5px
+}
+.nav li li:hover > a:first-child:nth-last-child(2):before {
+  border: 5px solid transparent; 
+  border-right-color: #000;
+  right: 10px; 
+}
+ ul.nav li#side {
+      padding-right: 576px;
+      font-family: 'Yatra One', cursive;
+      font-size: 30px;
+ }
+
+ ul.nav li#side a{
+  font-size:24px;
+
+ }
+ul.nav li#side a:hover{
+  color: rgb(255, 252, 252);
+}
+
+ h3#headline{
+  font-family: 'Playfair Display', serif;
+  color: #000;
+  text-decoration:none;
+ }
+
+ p#content{
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size:14px;
+ }
+
+div.landing{
+  height: 88vh;
+  width:100vw;
+  background-image:url("https://images.pexels.com/photos/2034892/pexels-photo-2034892.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-image:url("https://images.pexels.com/photos/631477/pexels-photo-631477.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+}
+
+div.break{
+  height:0.3vh;
+}
+
+h1#nheading{
+  font-family: "Barlow Condensed",sans-serif;
+  font-weight:700;
+  font-size:55px;
+  padding-top:30vh;
+  padding-left:36vw;
+}
+    </style>
+    </head>
+    <body>
+
+    <nav>
+   <ul class="nav">
+  <li id="side"><a href="#">जाgrukta</a></li>
+    <li><a href="#">News</a>
+      <ul>
+        <li><a href="#">Entertainment</a></li>
+           <ul class="hlist">
+             <li><a href="#"> Bollywood </a></li>
+             <li><a href="#"> Hollywood </a></li>
+             <li><a href="#"> South India </a></li>
+             <li><a href="#"> Maharashtra </a></li>
+           </ul>  
+        <li><a href="#">Economics</a>
+          <ul class="hlist">
+            <li><a href="#">INDIA</a></li>
+            <li><a href="#">INTERNATIONAL</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Astronomy</a></li>
+        <li><a href="#">Sports</a>
+           <ul class="hlist">
+             <li><a href="#"> Cricket </a></li>
+             <li><a href="#"> IPL </a></li>
+             <li><a href="#"> WPL </a></li>
+             <li><a href="#"> Football </a></li>
+             <li><a href="#"> NBA </a></li>
+             <li><a href="#"> Other Sports </a></li>
+           </ul>  
+           </li>
+           <li><a href="#">Defence</a></li>
+           </ul>
+           
+    </li>
+   
+        <li><a href="videos">Videos</a></li>
+        
+      
+    <li><a href="home">Home</a></li>
+  </ul>
+</nav>
+
+<header class="navbar">
+
+{% comment %}
+        <nav>
+            <h1>जाgrukta</h1>
+            <ul>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">HOME <span class="caret"></span></a>
+                     <div class="menu-content">
+                         <a class="links-hidden" href="#">Contact Us</a>
+                         <a class="links-hidden" href="#">Visit Us</a>
+                         <a class="links-hidden" href="#">About Us</a>
+                     </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="login">LOCAL NEWS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact-us">CONTACT US</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="register">SIGN UP</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="login">LOGIN</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="payment">DONATE</a>
+                </li>
+            </ul>
+        </nav>
+         
+          {% endcomment %}
+
+        <div class="break">
+        </div>
+        <div class="landing">
+        <h1 id="nheading" style="color:white;">ENTERTAINMENT NEWS</h1>
+        </div>
+        <div class="row">
+         {% for x in employees %}
+          <div class="column">
+            <div class="card">
+              
+                    <img src="{{x.0}}" height=240px width=300px/>
+                    <h3 id = "headline" style=padding-top:10px;height:100px;font-size:20px;"> <a href="{{x.1}}">{{x.3}}</h3></a>
+                    <p id="content" style="height:120px;">{{x.2}}</p> 
+             
+            </div>
+         </div>
+          {% endfor %}
+        </div>
+
+        <footer>
+  <!-- Footer main -->
+  <section class="ft-main">
+ 
+    <div class="ft-main-item">
+      <h2 class="ft-title">Stay Updated</h2>
+      <p>Subscribe to our newsletter to get our latest news.</p>
+      <form>
+        <input type="email" name="email" placeholder="Enter email address">
+        <input type="submit" value="Subscribe">
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer social -->
+  <section class="ft-social">
+    <ul class="ft-social-list">
+      <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+      <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+      <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+      <li><a href="#"><i class="fab fa-github"></i></a></li>
+      <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+      <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+    </ul>
+  </section>
+
+  <!-- Footer legal -->
+  <section class="ft-legal">
+    <ul class="ft-legal-list">
+      <li><a href="#">Terms &amp; Conditions</a></li>
+      <li><a href="#">Privacy Policy</a></li>
+      <li>&copy; 2023 Copyright Jagrukta Inc.</li>
+    </ul>
+  </section>
+</footer>
+ 
+        <script>
+      $(document).on('click', '.dropdown-menu', function (e) {
+  e.stopPropagation();
+});
+
+// make it as accordion for smaller screens
+if ($(window).width() < 992) {
+  $('.dropdown-menu a').click(function(e){
+    e.preventDefault();
+      if($(this).next('.submenu').length){
+        $(this).next('.submenu').toggle();
+      }
+      $('.dropdown').on('hide.bs.dropdown', function () {
+     $(this).find('.submenu').hide();
+  })
+  });
+}
+    </script>
+
+    </body>
+
+</html>
